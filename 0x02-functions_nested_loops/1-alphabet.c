@@ -1,11 +1,10 @@
 #include "main.h"
+
 /*
- * print_alphabet - prints alphabets in lowercase
- *
- * Return: returns null
+ * print_alphabet(void); - Fucking functions prints lowercase alphabet
  */
 
-void print_alphabet(void);
+void print_alphabet(void)
 {
 	char c = 'a';
 
