@@ -23,7 +23,7 @@ void print_alphabet_x10(void)
 			c++;
 		}
 
-		_putchar('\n')
+		_putchar('\n');
 		i++;
 	}
 }
