@@ -1,8 +1,11 @@
 #include "main.h"
 
-/*
- * print_alphabet(void); - Fucking functions prints lowercase alphabet
- * Description: Described above
+/**
+ * print_alphabet - main
+ *
+ * as described above the function prints lowercase letters
+ *
+ * Return: null
  */
 
 void print_alphabet(void)
