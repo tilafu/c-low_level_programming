@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - contains fizzbizz
@@ -9,7 +10,7 @@ int main(void)
 {
 	int i;
 
-	for (i > 0; i <= 100; i++)
+	for (i = 1; i <= 100; i++)
 	{
 		if (i % 3 == 0)
 
@@ -17,15 +18,15 @@ int main(void)
 
 		else if (i % 5 == 0)
 
-			printf("Buzz")
+			printf("Buzz");
 
-		else if (i % (5 * 3) == 0)
+		else if (i % 15 == 0)
 
-			printf("FizzBuzz")
+			printf("FizzBuzz");
 
 		else
 
-			printf("%i", i)
+			printf("%i", i);
 
 		if (i < 100)
 
