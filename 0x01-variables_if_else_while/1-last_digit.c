@@ -3,11 +3,11 @@
 #include <stdio.h>
 
 /**
- * last_digit - Prints the last digit of n
- * @n: variable taken into consideration
+ * main - Prints the last digit of n
  * Return: Nothing
  */
 
+int main(void)
 {
 	int n;
 
