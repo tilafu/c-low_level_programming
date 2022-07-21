@@ -18,7 +18,9 @@ int _sqrt_recursion(int n)
  */
 int root(int c, int i)
 {
-	int square = i * i;
+	int square;
+
+	square = i * i;
 
 	if (square == c)
 		return (i);
