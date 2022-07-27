@@ -32,7 +32,7 @@ char *argstostr(int ac, char **av)
 		j = 0;
 		while (av[i][j])
 			cont[len++] = av[i][j++];
-		cont[cont++] = '\n';
+		cont[len++] = '\n';
 	}
 	cont[len] = '\0';
 	return (cont);
