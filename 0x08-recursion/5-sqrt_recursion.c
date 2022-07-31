@@ -14,14 +14,14 @@ int root(int min, int max, int m)
 
 	if (max >= min)
 	{
-		guess = min + (max + min) / 2;
+		guess = (max + min) / 2;
 		if (guess * guess == m)
 			return (guess);
 
 		if (guess * guess > m)
 			return (root(min, guess - 1, m));
 		if (guess * guess < m)
-			return (root(guess + 1, m, m));
+			return (root(guess + 1, max, m));
 	}
 	return (-1);
 }
