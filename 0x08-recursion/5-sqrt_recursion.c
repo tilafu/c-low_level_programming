@@ -1,32 +1,42 @@
 #include "main.h"
 /**
- * _sqrt_recursion - return the root of n
- * @n: number whose root we want
+ * root  - helper function to return the root of n
+ * @m: number whose root we want
+ * @min: set to one to provide lower limit
+ * @max: set to m to provide upper limit
  * Return: if no natural root, return -1, otherwise return root
  */
 
-int _sqrt_recursion(int n)
+
+int root(int min, int max, int m)
 {
-	return (root(n, 1));
+	int guess;
+
+	if (max >= min)
+	{
+		guess = min + (max + min) / 2;
+		if (guess * guess == m)
+			return (guess);
+
+		if (guess * guess > m)
+			return (root(min, guess - 1, m));
+		if (guess * guess < m)
+			return (root(guess + 1, m, m));
+	}
+	return (-1);
 }
 
 /**
- * root - function to find _sqrt_recursion
- * @c: number to find root
- * @i: increment number
- * Return: square root of -1 if none is found
+ * _sqrt_recursion  - fxn to find the squareroot
+ * @n: number to find the root
+ * Return: square root, or -1  if no root is found
  */
-int root(int c, int i)
+int _sqrt_recursion(int n)
 {
-	int square;
-
-	square = i * i;
-
-	if (square == c)
-		return (i);
-
-	else if (square < c)
-		return (root(c, i + 1));
-	else
+	if (n < 0)
 		return (-1);
+	if (n == 0)
+		return (0);
+
+	return (root(1, n, n));
 }
