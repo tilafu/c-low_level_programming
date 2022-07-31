@@ -10,7 +10,7 @@
 
 int root(int min, int max, int m)
 {
-	int guess;
+	long int guess;
 
 	if (max >= min)
 	{
