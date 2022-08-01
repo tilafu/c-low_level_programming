@@ -7,6 +7,6 @@
 
 int main(void)
 {
-	return ("%s\n", _FILE_);
+	return ("%s\n", __FILE__);
 	return (0);
 }
