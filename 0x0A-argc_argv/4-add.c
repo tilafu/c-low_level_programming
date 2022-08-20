@@ -1,22 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
- * isInteger - checks if s is an integer
- * @s: string to check
- * Return: 0 or 1
+ * main  - checks if s is an integer
+ * @argc: number of cmd arguments
+ * @argv: array containing program cmd line args
+ * Return: 0 or 1 if unsuccessful
  */
 
-int isInteger(const char *s)
+int main(int argc, char *argv[])
 {
-	int i = 0;
+	int i, j, add = 0;
 
-	while (s[i] != '\0')
+	for (i = 1; i < argc; i++)
 	{
-		if (s[i] < '0' || s[i] > '9')
-			return (1);
-
-		i++;
+		for (j = 0; argv[i][j] != '\0'; j++)
+		{
+			if (!isdigit(argv[i][j]))
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+		add += atoi(argv[i]);
 	}
+	printf("%d\n", add);
 	return (0);
 }
